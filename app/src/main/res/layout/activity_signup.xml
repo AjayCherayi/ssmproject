@@ -3,26 +3,91 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimary"
-    android:padding="30dp"
-    >
+    android:padding="30dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:src="@drawable/back_button"
-            />
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:src="@drawable/back_btn" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CREATE ACCOUNT"
             android:textColor="@color/fontColor"
-            android:textSize="40sp"/>
+            android:textSize="40sp"
+            android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Name"
+            app:startIconDrawable="@drawable/person"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconTint="@color/fontColor"
+            app:hintTextColor="@color/fontColor"
+            android:textColorHint="@color/fontColor"
+            app:endIconMode="clear_text"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeColor="@color/fontColor">
+
+           <com.google.android.material.textfield.TextInputEditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                app:startIconDrawable="@drawable/email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconTint="@color/fontColor"
+                app:hintTextColor="@color/fontColor"
+                android:textColorHint="@color/fontColor"
+                app:endIconMode="clear_text"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeColor="@color/fontColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                app:startIconDrawable="@drawable/phone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconTint="@color/fontColor"
+                app:hintTextColor="@color/fontColor"
+                android:textColorHint="@color/fontColor"
+                app:endIconMode="clear_text"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeColor="@color/fontColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>
