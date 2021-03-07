@@ -9,7 +9,10 @@
         android:roundIcon="@drawable/rq"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project007">
-        <activity android:name=".LoginSignup.DashBoard"></activity>
+        <activity android:name=".LoginSignup.Verifcation"></activity>
+        <activity android:name=".LoginSignup.HomePage" />
+        <activity android:name=".LoginSignup.Login" />
+        <activity android:name=".LoginSignup.DashBoard" />
         <activity android:name=".NavBar" />
         <activity android:name=".LoginSignup.Sign" />
         <activity android:name=".MainActivity">

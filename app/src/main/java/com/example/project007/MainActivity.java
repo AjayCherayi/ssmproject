@@ -10,6 +10,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.project007.LoginSignup.HomePage;
+import com.example.project007.LoginSignup.Login;
 import com.example.project007.LoginSignup.Sign;
 
 
@@ -46,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(MainActivity.this, Sign.class);
+                Intent intent=new Intent(MainActivity.this, HomePage.class);
                 startActivity(intent);
                 finish();
             }
