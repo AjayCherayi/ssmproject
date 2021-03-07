@@ -10,15 +10,16 @@ import android.widget.Button;
 import com.example.project007.MainActivity;
 import com.example.project007.NavBar;
 import com.example.project007.R;
+import com.example.project007.UserDatas;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Signup extends AppCompatActivity {
+public class Sign extends AppCompatActivity {
 
     TextInputLayout name,phone,email,password;
-    FirebaseDatabase rootNode = FirebaseDatabase.getInstance();
-    DatabaseReference reference  = rootNode.getReference("User");
+    FirebaseDatabase rootNode;
+    DatabaseReference reference  ;
 
     Button reg;
 
@@ -40,12 +41,19 @@ public class Signup extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                rootNode = FirebaseDatabase.getInstance("https://project-007-ef30b-default-rtdb.firebaseio.com/");
+                reference  = rootNode.getReference("Ready");
 
+                String uname = name.getEditText().getText().toString();
+                String uphone = phone .getEditText().getText().toString();
+                String uemail = email.getEditText().getText().toString();
+                String uppassword = password.getEditText().getText().toString();
 
-                reference.setValue("hooi");
+                UserDatas usrdatas = new UserDatas(uname,uphone,uemail,uppassword);
 
+                reference.child(uphone).setValue(usrdatas);
 
-              //  startActivity(new Intent(Signup.this, DashBoard.class));
+                startActivity(new Intent(Sign.this, DashBoard.class));
             }
         });
     }

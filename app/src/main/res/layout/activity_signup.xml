@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorPrimary"
+    android:background="@color/background"
     android:padding="30dp">
 
     <LinearLayout
@@ -29,6 +29,7 @@
             android:layout_marginTop="40dp"
             android:orientation="vertical">
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Name"
@@ -48,8 +49,10 @@
 
         </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:hint="Email"
                 app:startIconDrawable="@drawable/email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -62,14 +65,18 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"/>
 
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Phone Number"
+                android:layout_marginTop="10dp"
                 app:startIconDrawable="@drawable/phone"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:startIconTint="@color/fontColor"
@@ -81,12 +88,46 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Password"
+                app:startIconDrawable="@drawable/lock"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconTint="@color/fontColor"
+                app:hintTextColor="@color/fontColor"
+                android:textColorHint="@color/fontColor"
+                app:endIconMode="password_toggle"
+                app:boxStrokeWidth="2dp"
+                app:endIconTint="@color/fontColor"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/fontColor"
+                app:boxStrokeColor="@color/fontColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"/>
 
 
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/reg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cornerRadius="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Submit" />
 
     </LinearLayout>
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">QR7</string>
     <string name="logo_name">QrrN</string>
     <string name="qr_code_reg">QR Code Registraion</string>
     <string name="pwd_by">Powerd By Group 7</string>

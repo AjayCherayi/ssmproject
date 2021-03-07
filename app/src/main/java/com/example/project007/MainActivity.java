@@ -1,7 +1,6 @@
 package com.example.project007;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,7 +10,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.project007.LoginSignup.Signup;
+import com.example.project007.LoginSignup.Sign;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(MainActivity.this, Signup.class);
+                Intent intent=new Intent(MainActivity.this, Sign.class);
                 startActivity(intent);
                 finish();
             }

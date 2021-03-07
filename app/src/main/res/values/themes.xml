@@ -6,4 +6,15 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+
+    <!--- Menu Style -->
+
+    <style name="navtheme">
+        <!-- Text Color -->
+        <item name="colorPrimary">@color/fontColor</item>
+        <!-- Background Color -->
+        <item name="colorControlHighlight">@color/background</item>
+        <item name="sizePercent">25</item>
+    </style>
 </resources>
